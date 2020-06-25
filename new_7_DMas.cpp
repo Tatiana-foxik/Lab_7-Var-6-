@@ -23,7 +23,7 @@ void input_file(int a[n][n])		//Функция записи массива из 
 	ifstream f("matrix.txt");
 	if (f.is_open())
 	{
-		cout << "Файл открыт!" << endl;
+		cout << "Файл открыт\n";
 		for (int i = 0; i < n; i++)
 		{
 			for (int j = 0; j < n; j++)
