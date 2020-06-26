@@ -39,6 +39,40 @@ void input_file(int a[n][n])		//Функция записи массива из 
 	f.close();
 }
 
+int* mas_x(int(*a)[n], int* x,
+	void (*mas)(int[n][n]))
+{
+	int pol, otr, l = 0;
+	mas(a);
+	for (int i = 0; i < n; i++)
+	{
+		pol = 0;
+		otr = 0;
+		for (int j = 0; j < n; j++)
+		{
+			if (a[i][j] >= 0)
+			{
+				pol += 1;
+			}
+			else
+			{
+				otr += 1;
+			}
+		}
+		if (pol > otr)
+		{
+			x[l] = 1;
+			l++;
+		}
+		else
+		{
+			x[l] = -1;
+			l++;
+		}
+	}
+	return x;
+}
+
 int main()
 {
 	setlocale(LC_ALL, "Russian");
@@ -57,4 +91,5 @@ int main()
 	{
 		mas = input_file;
 	}
+	mas_x(a, x, mas);
 }
