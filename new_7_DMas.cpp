@@ -73,6 +73,14 @@ int* mas_x(int(*a)[n], int* x,
 	return x;
 }
 
+void proverka(int x[])
+{
+	for (int l = 0; l < n; l++)
+	{
+		cout << "x[" << l << "]: " << x[l] << " \n";
+	}
+}
+
 int main()
 {
 	setlocale(LC_ALL, "Russian");
@@ -92,4 +100,5 @@ int main()
 		mas = input_file;
 	}
 	mas_x(a, x, mas);
+	proverka(x);
 }
