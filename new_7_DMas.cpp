@@ -79,11 +79,20 @@ int* mas_x(int(*a)[n], int* x, int* x1,
 	return x1;
 }
 
-void proverka(int x[])
+/*void mas_y()
+{
+
+}*/
+
+void proverka(int x[], int x1[])
 {
 	for (int l = 0; l < n; l++)
 	{
 		cout << "x[" << l << "]: " << x[l] << " \n";
+	}
+	for (int l = 0; l < n; l++)
+	{
+		cout << "x[" << l << "]: " << x1[l] << " \n";
 	}
 }
 
@@ -92,7 +101,7 @@ int main()
 	setlocale(LC_ALL, "Russian");
 	cout << "Курносова Татьяна Пи-192\n";
 	int t;
-	int a[n][n];
+	int a[n][n], x[n], x1[n];
 	void (*mas)(int[n][n]);
 	mas = NULL;
 	cout << "Вы хотите взять заполненный масиив(1) или же заполнить его самостоятельно(0)\n";
@@ -105,6 +114,6 @@ int main()
 	{
 		mas = input_file;
 	}
-	mas_x(a, x, mas);
-	proverka(x);
+	mas_x(a, x, x1, mas);
+	proverka(x, x1);
 }
