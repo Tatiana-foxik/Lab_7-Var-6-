@@ -39,7 +39,7 @@ void input_file(int a[n][n])		//Функция записи массива из 
 	f.close();
 }
 
-int* mas_x(int(*a)[n], int* x,
+int* mas_x(int(*a)[n], int* x, int* x1,
 	void (*mas)(int[n][n]))
 {
 	int pol, otr, l = 0;
@@ -70,7 +70,13 @@ int* mas_x(int(*a)[n], int* x,
 			l++;
 		}
 	}
+	l = 0;
+	for (int i = 0; i < n; i++)
+	{
+		x1[i] = a[0][i];
+	}
 	return x;
+	return x1;
 }
 
 void proverka(int x[])
