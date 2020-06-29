@@ -97,16 +97,14 @@ int mas_y(int a[n][n], int m[], int y, int i)
 	}
 }
 
-void proverka(int x[], int x1[])
+void proverka(int x[])
 {
+	cout << "Массив x: \n";
 	for (int l = 0; l < n; l++)
 	{
 		cout << "x[" << l << "]: " << x[l] << " \n";
 	}
-	for (int l = 0; l < n; l++)
-	{
-		cout << "x[" << l << "]: " << x1[l] << " \n";
-	}
+	//	cout << "y=" << y;
 }
 
 int main()
