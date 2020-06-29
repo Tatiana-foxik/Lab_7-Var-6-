@@ -79,10 +79,23 @@ int* mas_x(int(*a)[n], int* x, int* x1,
 	return x1;
 }
 
-/*void mas_y()
+int mas_y(int a[n][n], int m[], int y, int i)
 {
-
-}*/
+	if (i < n)
+	{
+		m[i] = a[0][i];
+		y = mas_y(a, m, y, i + 1);
+		if (m[i] % 2 == 0)
+		{
+			y++;
+		}
+		return y;
+	}
+	else
+	{
+		return 0;
+	}
+}
 
 void proverka(int x[], int x1[])
 {
