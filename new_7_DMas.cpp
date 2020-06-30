@@ -91,13 +91,26 @@ int mas_y(int a[n][n], int m[], int y, int i)
 	}
 }
 
-void proverka(int x[])
+void proverka(int a[n][n], int x[])
 {
+	cout << "Ваш массив: \n";
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			cout << a[i][j] << " ";
+			if (j % 5 == 4)
+			{
+				cout << "\n";
+			}
+		}
+	}
 	cout << "Массив x: \n";
 	for (int l = 0; l < n; l++)
 	{
-		cout << "x[" << l << "]: " << x[l] << " \n";
+		cout << x[l] << "  ";
 	}
+	cout << endl;
 	//	cout << "y=" << y;
 }
 
@@ -119,6 +132,7 @@ int main()
 	{
 		mas = input_file;
 	}
-	mas_x(a, x, x1, mas);
-	proverka(x, x1);
+	//	mas_x(a, x, mas);
+	//	mas_y(a, m, y, i);
+	proverka_x(a, mas_x(a, x, mas));
 }
