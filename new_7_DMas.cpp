@@ -91,7 +91,7 @@ int mas_y(int a[n][n], int m[], int y, int i)
 	}
 }
 
-void proverka(int a[n][n], int x[])
+void proverka_x(int a[n][n], int x[])
 {
 	cout << "Ваш массив: \n";
 	for (int i = 0; i < n; i++)
@@ -113,6 +113,11 @@ void proverka(int a[n][n], int x[])
 	cout << endl;
 }
 
+void proverka_y(int y)
+{
+	cout << "y=" << y;
+}
+
 int main()
 {
 	setlocale(LC_ALL, "Russian");
@@ -132,4 +137,5 @@ int main()
 		mas = input_file;
 	}
 	proverka_x(a, mas_x(a, x, mas));
+	proverka_y(mas_y(a, m, y, 0));
 }
