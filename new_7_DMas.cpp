@@ -39,7 +39,7 @@ void input_file(int a[n][n])		//Функция записи массива из 
 	f.close();
 }
 
-int* mas_x(int(*a)[n], int* x, int* x1,			// Функция вычисления массива x
+int* mas_x(int(*a)[n], int* x,			// Функция вычисления массива x
 	void (*mas)(int[n][n]))
 {
 	int pol, otr, l = 0;
@@ -111,7 +111,6 @@ void proverka(int a[n][n], int x[])
 		cout << x[l] << "  ";
 	}
 	cout << endl;
-	//	cout << "y=" << y;
 }
 
 int main()
@@ -132,7 +131,5 @@ int main()
 	{
 		mas = input_file;
 	}
-	//	mas_x(a, x, mas);
-	//	mas_y(a, m, y, i);
 	proverka_x(a, mas_x(a, x, mas));
 }
