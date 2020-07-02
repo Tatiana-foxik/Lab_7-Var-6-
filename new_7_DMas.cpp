@@ -118,6 +118,38 @@ void output_y(int y)
 	cout << "y=" << y;
 }
 
+void output_file(int a[n][n], int x[], int y)
+{
+	ofstream f("rezalt.txt");
+	if (f.is_open())
+	{
+		f << "Ваш массив: \n";
+		for (int i = 0; i < n; i++)
+		{
+			for (int j = 0; j < n; j++)
+			{
+				f << a[i][j] << " ";
+				if (j % 5 == 4)
+				{
+					f << "\n";
+				}
+			}
+		}
+		f << "Массив x: \n";
+		for (int l = 0; l < n; l++)
+		{
+			f << x[l] << " ";
+		}
+		f << "\n";
+		f << "y=" << y;
+	}
+	else
+	{
+		cout << "Ошибка открытия файла\n";
+	}
+	f.close();
+}
+
 int main()
 {
 	setlocale(LC_ALL, "Russian");
@@ -138,4 +170,5 @@ int main()
 	}
 	output_x(a, mas_x(a, x, mas));
 	output_y(mas_y(a, m, y, 0));
+	output_file(a, x, y);
 }
