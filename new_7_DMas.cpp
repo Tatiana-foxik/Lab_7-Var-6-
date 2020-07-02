@@ -113,7 +113,7 @@ void output_x(int a[n][n], int x[])
 	cout << endl;
 }
 
-void proverka_y(int y)
+void output_y(int y)
 {
 	cout << "y=" << y;
 }
@@ -137,5 +137,5 @@ int main()
 		mas = input_file;
 	}
 	output_x(a, mas_x(a, x, mas));
-	proverka_y(mas_y(a, m, y, 0));
+	output_y(mas_y(a, m, y, 0));
 }
